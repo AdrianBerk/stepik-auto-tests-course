@@ -1,5 +1,5 @@
 from selenium import webdriver
-
+from selenium.webdriver.common.by import By
 link = "http://selenium1py.pythonanywhere.com/"
 
 
@@ -17,11 +17,11 @@ class TestMainPage1():
 
     def test_guest_should_see_login_link(self):
         self.browser.get(link)
-        self.browser.find_element_by_css_selector("#login_link")
+        self.browser.find_element(By.CSS_SELECTOR, "#login_link")
 
     def test_guest_should_see_basket_link_on_the_main_page(self):
         self.browser.get(link)
-        self.browser.find_element_by_css_selector(".basket-mini .btn-group > a")
+        self.browser.find_element(By.CSS_SELECTOR, ".basket-mini .btn-group > a")
 
 
 class TestMainPage2():
@@ -36,8 +36,8 @@ class TestMainPage2():
 
     def test_guest_should_see_login_link(self):
         self.browser.get(link)
-        self.browser.find_element_by_css_selector("#login_link")
+        self.browser.find_element(By.CSS_SELECTOR, "#login_link")
 
     def test_guest_should_see_basket_link_on_the_main_page(self):
         self.browser.get(link)
-        self.browser.find_element_by_css_selector(".basket-mini .btn-group > a")
+        self.browser.find_element(By.CSS_SELECTOR, ".basket-mini .btn-group > a")
